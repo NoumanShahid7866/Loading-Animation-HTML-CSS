@@ -1,0 +1,39 @@
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: darkblue;
+}
+.loader{
+    display: flex;
+    height: 200px;
+    width:200px;
+    border-top: 5px solid #42c7f3;
+    border-right: 5px solid #42c7f3;
+    border-radius: 50%;
+    animation: anim 2s linear infinite;
+}
+.loader::after{
+    content: '';
+    position: relative;
+    top:200px;
+    left:70px;
+      height:20px;
+      width: 20px;
+      background-color: #42c7f3;
+      border-radius:50%;
+}
+h3{
+    position: absolute;
+    color: #42c7f3;
+    font-size: 20px;
+}
+@keyframes anim{
+    0%{
+        transform: rotate(0deg);
+    }
+        100%{
+            transform: rotate(360deg);
+        }
+    
+}
